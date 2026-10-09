@@ -1,0 +1,77 @@
+/* demo bar */
+.demo-bar{background:var(--signal);color:var(--asphalt);font:600 .82rem/1.45 var(--f-body);padding:8px var(--gut);text-align:center}
+.demo-bar a{font-weight:700}
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(21,23,27,.97);color:#fff;border-bottom:1px solid #2c3139}
+.nav{display:flex;align-items:center;gap:18px;min-height:68px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px;margin-right:auto;min-width:0}
+.mk{flex:0 0 auto;display:grid;place-items:center;width:42px;height:42px;background:var(--paper);color:var(--asphalt);font:700 1.05rem/1 var(--f-display);letter-spacing:.02em;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%)}
+.mark b{display:block;font:700 1rem/1.1 var(--f-display);letter-spacing:.01em}
+.mark small{display:block;font:400 .78rem/1.3 var(--f-body);color:var(--primer)}
+#menu{list-style:none;margin:0;padding:0;display:flex;gap:4px}
+#menu a{display:flex;align-items:center;min-height:44px;padding:0 12px;text-decoration:none;font:600 .95rem/1 var(--f-display);letter-spacing:.04em;color:#e9e7e2}
+#menu a:hover,#menu a[aria-current]{color:#fff;box-shadow:inset 0 -3px 0 var(--stripe)}
+.menu-btn{display:none;min-height:44px;min-width:44px;padding:0 14px;background:transparent;color:#fff;border:1px solid #4a515c;font:600 .95rem/1 var(--f-display);letter-spacing:.06em;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;font:700 1rem/1.1 var(--f-display);letter-spacing:.05em;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s var(--ease),background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn--go{background:var(--signal);color:var(--asphalt)}
+.btn--line{border-color:currentColor;background:transparent}
+.btn--call{min-height:44px;padding:0 16px;white-space:nowrap}
+.cl-short{display:none}
+@media (max-width:980px){
+ .menu-btn{display:block}
+ #menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--asphalt);border-bottom:3px solid var(--stripe);padding:6px var(--gut) 14px}
+ #menu.open{display:flex}
+ #menu a{min-height:52px;border-bottom:1px solid #2c3139;font-size:1.05rem}
+ .nav{position:relative}
+}
+@media (max-width:560px){.cl-full{display:none}.cl-short{display:inline}.mark small{display:none}.nav{gap:10px}}
+@media (max-width:400px){.mark b{font-size:.9rem}.mk{width:36px;height:36px;font-size:.9rem}.btn--call{padding:0 10px}.menu-btn{padding:0 10px}.nav{gap:8px}}
+@media (max-width:340px){.mark b{font-size:.82rem}}
+/* signature: the pinstripe. Two coach lines, blue over orange, that draw in from the left */
+.pin{display:block;height:9px;border-top:2px solid var(--stripe);border-bottom:2px solid var(--signal);transform-origin:0 50%;transform:scaleX(0);transition:transform 1.1s var(--ease)}
+.js-ready .pin.in,.no-js .pin{transform:none}
+.pin--short{width:120px}
+.pin--hero{position:absolute;left:0;right:0;bottom:0}
+/* reveals: fade and a 22px rise, no blur (WebKit DPR3 crash lesson) */
+.js-ready .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js-ready .rv.in{opacity:1;transform:none}
+/* placeholders */
+.ph{display:inline-block;margin-right:8px;padding:2px 8px;font:700 .75rem/1.5 var(--f-display);letter-spacing:.14em;text-transform:uppercase;background:var(--asphalt);color:var(--signal);vertical-align:middle}
+.phbox{display:grid;place-items:center;min-height:220px;padding:24px;text-align:center;background:repeating-linear-gradient(135deg,#ddd9d0 0 14px,#e6e2da 14px 28px);color:var(--mute);font-size:1rem;border:1px dashed #a39e94}
+.phbox p{margin:0;max-width:34ch}
+.note{font-size:1rem;color:var(--mute)}
+.fine{font-size:.92rem;color:var(--mute)}
+/* review cards */
+.stars{color:var(--signal);letter-spacing:.12em;font-size:1rem}
+.rcard{margin:0;padding:28px;background:#fff;border-top:4px solid var(--stripe);display:flex;flex-direction:column;gap:12px;min-width:0}
+.rc-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:600 .8rem/1.3 var(--f-display);letter-spacing:.14em;text-transform:uppercase;color:var(--stripe-dk)}
+.rcard blockquote{margin:0}
+.rcard blockquote p{margin:0;font-size:1.06rem}
+.rcard figcaption{margin-top:auto;font-size:.92rem;color:var(--mute)}
+.rcard--lead blockquote p{font:600 clamp(1.3rem,2.4vw,1.75rem)/1.3 var(--f-display)}
+/* forms */
+.form{display:grid;gap:16px;min-width:0}
+.form fieldset{border:0;padding:0;margin:0;min-width:0;display:grid;gap:16px}
+.form label{display:grid;gap:6px;font:600 .9rem/1.3 var(--f-display);letter-spacing:.06em;min-width:0}
+.form input,.form select,.form textarea{width:100%;min-width:0;min-height:48px;padding:10px 12px;font:400 1rem/1.4 var(--f-body);color:var(--ink);background:#fff;border:1px solid #9a958c;border-radius:0}
+.form textarea{min-height:130px}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:620px){.form .two{grid-template-columns:1fr}}
+#qmsg{min-height:1.5em;font-weight:600;color:var(--stripe-dk)}
+/* footer: closing spread */
+.site-foot{background:var(--asphalt);color:#ecebe7;padding:0 0 28px;margin-top:0}
+.site-foot .pin{transform:none}
+.sign{padding:72px 0 48px;display:grid;gap:10px}
+.sign-k{margin:0;font:600 .8rem/1.3 var(--f-display);letter-spacing:.3em;text-transform:uppercase;color:var(--primer)}
+.sign-h{margin:0;font:700 var(--step-5)/1 var(--f-display);max-width:16ch}
+.sign-num{display:flex;width:fit-content;align-items:center;min-height:44px;font:700 clamp(1.7rem,4.6vw,3rem)/1.1 var(--f-display);color:var(--signal);text-decoration:none}
+.sign-sub{margin:0;color:var(--primer)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;padding:28px 0;border-top:1px solid #353a43}
+.foot-quote{margin:0;font:600 1.3rem/1.35 var(--f-display);max-width:30ch}
+.foot-quote span{display:block;margin-top:8px;font:400 .9rem/1.4 var(--f-body);color:var(--primer)}
+.site-foot nav{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;align-content:start}
+.site-foot nav a{display:flex;align-items:center;min-height:44px;text-decoration:none;border-bottom:1px solid #2c3139}
+.foot-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:18px;font-size:.9rem;color:var(--primer)}
+.foot-row a{display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr}}
