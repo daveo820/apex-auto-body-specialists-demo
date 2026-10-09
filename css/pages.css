@@ -9,12 +9,12 @@
 .hero .btn--line{color:#fff}
 .hero-facts{display:flex;flex-wrap:wrap;gap:12px 36px;margin:36px 0 0;padding-top:20px;border-top:1px solid #353a43}
 .hero-facts div{min-width:0}
-.hero-facts dt{font:600 .74rem/1.3 var(--f-display);letter-spacing:.24em;text-transform:uppercase;color:var(--primer)}
+.hero-facts dt{font:600 .8125rem/1.3 var(--f-display);letter-spacing:.24em;text-transform:uppercase;color:var(--primer)}
 .hero-facts dd{margin:4px 0 0;font-size:1.02rem}
 .hero-facts b{font:700 1.4rem/1 var(--f-display);color:#fff}
 .statute{position:relative;padding:28px 28px 24px;background:var(--steel);border-left:4px solid var(--stripe);min-width:0}
 .statute::before{content:"";position:absolute;left:-4px;top:0;bottom:0;width:4px;background:linear-gradient(var(--stripe) 50%,var(--signal) 50%)}
-.st-k{margin:0 0 6px;font:600 .74rem/1.3 var(--f-display);letter-spacing:.3em;text-transform:uppercase;color:var(--signal)}
+.st-k{margin:0 0 6px;font:600 .8125rem/1.3 var(--f-display);letter-spacing:.3em;text-transform:uppercase;color:var(--signal)}
 .st-cite{margin:0 0 14px;font:700 1.15rem/1.2 var(--f-display);color:#fff}
 .st-q{margin:0}
 .st-q p{font:400 italic 1.12rem/1.55 var(--f-body);color:#ecebe6;margin:0 0 14px}

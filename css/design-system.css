@@ -61,7 +61,7 @@ p{margin:0 0 1em;max-width:66ch}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--signal);outline-offset:3px}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
-.kicker{display:flex;align-items:center;gap:12px;margin:0 0 18px;font:600 .78rem/1.3 var(--f-display);letter-spacing:.26em;text-transform:uppercase;color:var(--mute)}
+.kicker{display:flex;align-items:center;gap:12px;margin:0 0 18px;font:600 .8125rem/1.3 var(--f-display);letter-spacing:.26em;text-transform:uppercase;color:var(--mute)}
 .kicker::before{content:"";flex:0 0 28px;height:5px;border-top:2px solid var(--stripe);border-bottom:2px solid var(--signal)}
 .on-dark .kicker,.kicker--dark{color:var(--primer)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
